@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*
+ /*! Principais estilos CSS
+
+    1.font-size = Tamanho da fonte
+    2.font-weigth = Peso da linha
+    3.line-heigth = Altura da linha
+    4.color = Cor da letra
+    5.background-color = Cor de fundo
+    6.Font-Family = Define qua vai ser a nosso familia de fontes
+    7.margin = Espaçamento Externo
+    8.padding = Espaçamento interno
+    9.border = borda
+    10.border-radius = Arredondamento nas bordas
+    11.width = largura
+    12.height = altura
+
+
+*/
+
+/*
+    /*! Displays
+    1.block = quebra alinha pos ele é um bloco
+    2.inline = não quebra a linha
+    3.flex = torna os elementos flexiveis é aplicado dentro do pai
+        1.flex-direction = direção dos filhos
+        2.justify-content = alinhamento horizontal
+        3.aling-itens = alinhamento vertical
+        4.flex-wrap = ele define se quando o elemento ficar pequeno se ele vai quebrar ou não de linha.
+        5.gap = controle do espaçamento entre itens
+        obs.Quando eu inverto a direção do flex muda a dinâmica dos flex justify-content transforma ele em alinhamento vertical e o aling-itens em alinhamento horizontal
+    4.grid(grades) = aplicado também ao pai
+        1.grid-template-columns ou grid-template-rows = ele estiliza as colunas ou as linhas
+*/
+.title {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+section#principais-estilos {
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: rgba(12, 4, 4, 0.527);
+    color: white;
+
+}
+
+#principais-estilos .paragrafo {
+    padding: 50px;
+    font-size: 22px;
+    font-family: monospace;
+    line-height: 1.5;
+}
+
+
+#flexbox .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#flexbox .container .box {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+}
+
+section#grid-layout {
+    margin-top: 50px;
+}
+
+#grid-layout .container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#grid-layout .container-grid .caixa {
+    height: 200px;
+    background-color: blueviolet;
+}

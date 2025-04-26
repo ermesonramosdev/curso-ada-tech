@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ermeson Ramos de Lima",
+    "age": 17,
+    "height": 1.70,
+    "Work": "Desenvolvedor Full-Stack",
+    "Hobbies": ["Academia", "Xadrez", "Programação", "Futebol"]
+  },
+  {
+    "name": "Alessandro",
+    "age": 18,
+    "height": 1.76,
+    "Work": "Desenvolvedor Full-Stack",
+    "Hobbies": ["Academia", "Xadrez", "Programação", "Futebol"]
+  },
+  {
+    "name": "Alecsander",
+    "age": 17,
+    "height": 1.75,
+    "Work": "Analista de Dados",
+    "Hobbies": ["Academia", "Artes Marciais", "Programação", "Volei"]
+  }
+]

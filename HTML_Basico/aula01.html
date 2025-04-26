@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teste"><!-- *Serve para adicionar alguma descrição para minha pagína web -->
+    <title>HTML Basíco I front-end em React</title>
+</head>
+<body>
+                    <!--Principais Tags HTML-->
+
+    <!-- *Titulos -->
+    <h1>Cabeçalho 1</h1>
+    <h2>Cabeçalho 2</h2>
+    <h3>Cabeçalho 3</h3>
+    <h4>Cabeçalho 4</h4>
+    <h5>Cabeçalho 5</h5>
+    <h6>Cabeçalho 6</h6>
+
+    <!-- *Paragrafos -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque culpa, nihil accusantium ipsa dignissimos assumenda non qui laborum, commodi sit enim excepturi iusto. Deleniti obcaecati saepe unde commodi debitis cum!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, ipsa dolore illum unde iste, consectetur voluptate atque corporis dolorum saepe nam accusamus omnis repellat eos inventore vel rem reprehenderit hic?</p>
+
+    <!-- *Linha da horizontal -->
+    <hr>
+
+    <!-- *Quebra de linha -->
+    <br>
+
+    <!-- *Links -->
+    <!--
+        target="_blank" ->  Abre o link em uma nova aba ou janela do navegador.
+
+
+
+        target="_self" -> Abre o link na mesma aba ou janela em que o link foi clicado (este é o comportamento padrão se o atributo target não for especificado)
+
+        target="_parent" -> Abre o link no contexto do iframe pai, se o link estiver em um iframe. Se não estiver em um iframe, o comportamento será o mesmo que _self.
+
+        target="_top" -> Abre o link na janela ou aba inteira do navegador, substituindo todos os iframes que possam estar sendo usados na página.
+    -->
+    <a href="https://ada.tech" >Ada Tech</a>
+    <br>
+
+    <!-- *Imagens -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBh19oIPkDvsBPVUj6zXK0x_FshrRugdVkdQ&s" alt="Sem imagem">
+    <!-- *Listas -->
+
+    <!--Não Ordenadas-->
+    <ul>
+        <li>Teste</li>
+        <li>Teste 2</li>
+        <li>Teste 3</li>
+    </ul>
+
+    <!--Ordenadas-->
+    <ol>
+        <li>Teste 1</li>
+        <li>Teste 2</li>
+        <li>Teste 3</li>
+    </ol>
+
+    <!-- *Tags de uso genérico -->
+
+    <!--Div: block-->
+    <div>Minha div</div>
+    <!--Span: inline-->
+    <span>Meu Span</span>
+    <br>
+
+
+    <!-- *Tags de formatação de texto -->
+    <strong>Strong</strong> <!-- Esta tag é usada para indicar que o texto deve ser exibido com ênfase forte. Em termos visuais, geralmente é apresentado em negrito-->
+    <br>
+    <em>Emphasis</em><!-- é usada para enfatizar o texto. Visualmente, isso geralmente se traduz em itálico-->
+    <br>
+    <i>Italic</i><!--é usada para estilizar o texto em itálico. Diferentemente da tag <em>, ela não tem um significado semântico especial, apenas estilístico.-->
+    <br>
+    <small>Small</small><!--A tag <small> é usada para diminuir o tamanho da fonte do texto.-->
+    <br>
+    <mark>Mark</mark><!-- A tag <mark> é usada para destacar o texto, geralmente com uma cor de fundo amarela. Indica que o texto é relevante em um contexto específico.-->
+    <br>
+    <del>Deleted Text</del><!--A tag <del> é usada para indicar que o texto foi removido ou excluído. Normalmente, o texto aparece com uma linha atravessada.-->
+    <br>
+    <ins>Inserted Text</ins><!--A tag <ins> é usada para indicar que o texto foi inserido. Geralmente, o texto aparece sublinhado.-->
+    <br>
+    <sub>Subscript</sub><!-- A tag <sub> é usada para exibir texto como subscrito. O texto é apresentado abaixo da linha base do texto.-->
+    <br>
+    <sup>Superscript</sup><!--A tag <sup> é usada para exibir texto como sobrescrito. O texto é apresentado acima da linha base do texto.-->
+    <br>
+    <hr>
+    <h1>Tabelas</h1>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ermeson</td>
+                <td>17</td>
+                <td>M</td>
+            </tr>
+
+            <tr>
+                <td>Ana Rebeca</td>
+                <td>8</td>
+                <td>F</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <h1>Formulários</h1>
+
+
+    <form action="" autocomplete="on">
+        <label for="inome">Nome:</label>
+        <input type="text" name="inome" id="inome" placeholder="Digite seu nome">
+        <br>
+        <label for="isenha">Senha</label>
+        <input type="password" name="isenha" id="isenha" placeholder="Digite sua senha">
+        <br><br>
+        <textarea name="message" id="" cols="30" rows="10">
+       
+        </textarea>
+        <br>
+        <br>
+        <select name="tecnologias" id="tecnologia">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+    </form>
+</body>
+</html>
