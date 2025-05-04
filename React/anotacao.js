@@ -215,6 +215,10 @@
               2. Cancelar uma requisição HTTP
               3. Invalidar algum timer.
 
+        
+    ! Componentes Funcionais e Estilização.  
+      * Componente Funcional: É uma função que retorna HTML  .     
+
 
         
 
