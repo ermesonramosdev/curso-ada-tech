@@ -7,5 +7,8 @@
          ? : React.FC
             -> Determina que o componente se torna funcional.
 
+        * CSS Modules 
+        ->  Vai criar uma estilização unica para meu componente para não ter conflitos entre as classes repetidas de outro componente.
+
 
 */
