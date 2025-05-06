@@ -11,9 +11,9 @@ export const Header: React.FC = () => {
                 <span>Bem Vindo, Ermeson!</span>
             </div>
             <div>
-                <StartsCards />
-                <StartsCards />
-                <StartsCards />
+                <StartsCards title="Total de Tarefas" value={1} />
+                <StartsCards title="Tarefas Pedentes" value={2} />
+                <StartsCards title="Tarefas Concluidas" value={3} />
             </div>
         </div>
        </header>

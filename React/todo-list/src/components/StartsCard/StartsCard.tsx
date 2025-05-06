@@ -1,9 +1,13 @@
 import styles from './styles.module.scss';
-export const StartsCards:React.FC = () => {
+interface StartsCardsProps {
+    title: string;
+    value: number;
+}
+export const StartsCards:React.FC<StartsCardsProps> = ({ title, value }) => {
     return(
         <article className={styles.stats_card}>
-            <h2>Total de Tarefas</h2>
-            <span>5</span>
+            <h2>{title}</h2>
+            <span>{value}</span>
         </article>
     );
 }

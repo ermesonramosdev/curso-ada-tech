@@ -4,6 +4,6 @@
     box-sizing: border-box;
 }
 
-body, button, input, select, option {
-
+body, button, input, select, option, textarea {
+    font-family: "Cairo", sans-serif;
 }
