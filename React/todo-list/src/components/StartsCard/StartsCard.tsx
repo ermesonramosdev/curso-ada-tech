@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 interface StartsCardsProps {
-    title: string;
+    title?: string;
     value: number;
 }
 export const StartsCards:React.FC<StartsCardsProps> = ({ title, value }) => {

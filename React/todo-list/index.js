@@ -24,6 +24,7 @@
 
         * Hooks de Estado:
         -> Estado: O mesmo conceito que vimos nos componentes em classe.
+            ? Ex: const [contador, função] = useState('estado em que começa o contador')
 
 
 */
