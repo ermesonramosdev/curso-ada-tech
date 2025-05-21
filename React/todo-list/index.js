@@ -26,5 +26,8 @@
         -> Estado: O mesmo conceito que vimos nos componentes em classe.
             ? Ex: const [contador, função] = useState('estado em que começa o contador')
 
+        * {} -> Eu saiu da aplicação React e entro no JavaScript.
+        * () -> Eu saiu do JavaScrit e entro na minha aplicação React.
+
 
 */
