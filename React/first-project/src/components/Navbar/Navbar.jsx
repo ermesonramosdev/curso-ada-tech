@@ -1,5 +1,4 @@
-import React from "react";
-import logoImg from '../../assets/image/react.svg';
+import logoImg from '../../assets/image/saturno.jpg';
 import './style.css';
 
 export function Navbar() {
