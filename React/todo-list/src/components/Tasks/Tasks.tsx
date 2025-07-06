@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 
 interface Task {
@@ -9,7 +9,15 @@ interface Task {
 
 export const Tasks:React.FC = () => {
     const [ tasksTitle, setTaskstitle ] = useState<string>('');
-    const [ tasks, setTasks ] = useState([] as Task[])
+    const [ tasks, setTasks ] = useState([] as Task[]);
+
+    useEffect(() => {
+        const taskOnLocalStorage = localStorage.getItem("tasks");
+
+        if(taskOnLocalStorage) {
+            setTasks(JSON.parse(taskOnLocalStorage));
+        }
+    }, []);
 
     function handleSubmitAddTaks(event: FormEvent) {
         event.preventDefault();
@@ -19,10 +27,13 @@ export const Tasks:React.FC = () => {
             return
         }
 
-        setTasks([
+        const newTasks = [
             ...tasks,
             { id: new Date().getTime(), title: tasksTitle, done: false }
-        ]);
+        ];
+        setTasks(newTasks);
+
+        localStorage.setItem('tasks', JSON.stringify(newTasks));
         setTaskstitle('');
     }
 
@@ -46,7 +57,7 @@ export const Tasks:React.FC = () => {
                 {tasks.map((tasks) => {
                     return (
                         <li key={tasks.id}>
-                            <input type="checkbox" id={`task-${tasks.id}`} />
+                            <input type="checkbox" id={`task-${tasks.id}`}/>
                             <label htmlFor={`task-${tasks.id}`}>{tasks.title}</label>
                         </li>
                     );
