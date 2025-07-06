@@ -144,6 +144,109 @@
         contador.current += 1;
 
 
+    ! React Funcional IV - Hooks de memoização
+        * useMemo:
+        ->  é um hook do React usado para memorizar valores calculados — ou seja, ele guarda o resultado de uma função e só recalcula esse valor quando as dependências mudam. Isso evita recalcular coisas pesadas desnecessariamente, melhorando o desempenho da aplicação.
+
+        📌 Sintaxe
+        const valorMemorizado = useMemo(() => {
+        // função que retorna um valor
+        return resultado;
+        }, [dependências]);
+
+        🔧 Quando usar?
+            Use useMemo quando:
+                1. Você tem cálculos pesados (ex: filtragens, ordenações, loops grandes).
+                2. O valor é reutilizado no render.
+                3. As dependências desse cálculo mudam com pouca frequência.
+
+        ✅ Exemplo simples
+            import React, { useMemo, useState } from 'react';
+
+            function Exemplo() {
+            const [numero, setNumero] = useState(0);
+            const [contador, setContador] = useState(0);
+
+            const numeroDobrado = useMemo(() => {
+                console.log("Calculando...");
+                return numero * 2;
+            }, [numero]);
+
+            return (
+                <div>
+                <p>Número: {numero}</p>
+                <p>Número Dobrado: {numeroDobrado}</p>
+                <button onClick={() => setNumero(numero + 1)}>Aumentar Número</button>
+                <button onClick={() => setContador(contador + 1)}>Aumentar Contador</button>
+                </div>
+            );
+            }
+
+            Explicação:
+                1. O valor numeroDobrado só será recalculado quando numero mudar.
+                2. Se apenas contador mudar, o cálculo não será refeito.
+
+            ⚠️ Cuidado:
+                1. Não use useMemo para tudo. Ele só vale a pena se o 2. 2. cálculo for realmente custoso.
+                Evite otimizar prematuramente. Use quando tiver problemas de performance reais ou re-renders desnecessários.
+
+        * useCallback
+            -> O useCallback é um hook do React usado para memorizar uma função, ou seja, evitar que ela seja recriada em toda renderização, a menos que suas dependências mudem.
+
+            📌 Sintaxe
+            const memoizedCallback = useCallback(() => {
+            // função
+            }, [dependências]);
+
+            ✅ Quando usar useCallback
+            Use quando:
+                1. Você passa uma função para um componente filho que é otimizado com React.memo.
+                3. Você quer evitar que a função seja recriada em cada render.
+                3. A função depende de valores que podem mudar, e você quer controlar isso com um array de dependências.
+
+            🧠 Exemplo prático
+            import React, { useState, useCallback } from 'react';
+
+            const Button = React.memo(({ onClick, children }) => {
+            console.log('Renderizou:', children);
+            return <button onClick={onClick}>{children}</button>;
+            });
+
+            function App() {
+            const [count, setCount] = useState(0);
+            const [dark, setDark] = useState(false);
+
+            // Esta função só será recriada se `count` mudar
+            const increment = useCallback(() => {
+                setCount((c) => c + 1);
+            }, []);
+
+            const themeStyles = {
+                backgroundColor: dark ? '#333' : '#FFF',
+                color: dark ? '#FFF' : '#000',
+            };
+
+            return (
+                <div style={themeStyles}>
+                <h1>{count}</h1>
+                <Button onClick={increment}>Incrementar</Button>
+                <button onClick={() => setDark((prev) => !prev)}>Toggle Tema</button>
+                </div>
+            );
+            }
+
+            🔍 Sem useCallback, a função increment seria recriada sempre que o componente App fosse re-renderizado, o que faria o botão filho Button (mesmo com React.memo) renderizar novamente. Com useCallback, ela é mantida na memória e o Button só renderiza se realmente precisar.
+
+            ⚠️ Quando não usar useCallback
+            1. Se a função não é passada para componentes filhos, não é usada em useEffect ou não tem impacto de performance, não precisa usar.
+            2. Usar useCallback à toa pode até prejudicar a performance, porque manter referências em memória também custa.
+
+
+
+
+
+
+
 
 
 */
